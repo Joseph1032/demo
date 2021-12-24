@@ -86,7 +86,7 @@ body {
   font-family: 'Big Shoulders Display', cursive;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.75);
-  font-size: 30px;
+  font-size: 40px;
   text-transform: uppercase;
 }
 #cards_container .card-description {
@@ -103,7 +103,7 @@ body {
   padding: 15px 30px;
   border-radius: 50px;
   border-color: transparent;
-  margin-top: 100px;
+  margin-top: 70px;
   -webkit-transition: .3s;
   transition: .3s;
 }
