@@ -1,0 +1,135 @@
+// Font Group
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+@header-font-family: 'Big Shoulders Display', cursive;
+@header-font-weight: 700;
+@base-font-family: 'Lexend Deca', sans-serif;
+@base-font-weight: 400;
+@base-font-size: 15px;
+
+// Color Group
+@base-bg: hsl(0, 0%, 95%);
+@color1: hsla(0, 0%, 100%, 0.75);
+@color2: hsl(31, 77%, 52%);
+@color3: hsl(184, 100%, 22%);
+@color4: hsl(179, 100%, 13%);
+
+body {
+    background: @base-bg;
+    font-family: @base-font-family;
+    margin: 0;
+    padding: 8% 4%;
+}
+
+#cards_container {
+    display: flex;
+    justify-content: center;
+
+    @media only screen and (max-width: 799px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        padding: 60px;
+
+        &#sedans {
+            background: @color2;
+
+            @media only screen and (max-width: 799px) {
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+
+            @media only screen and (min-width: 800px) {
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+
+            .learn-more {
+                color: @color2;
+            }
+        }
+
+        &#suvs {
+            background: @color3;
+
+            .learn-more {
+                color: @color3;
+            }
+        }
+
+        &#luxury {
+            background: @color4;
+
+            @media only screen and (max-width: 799px) {
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+            
+            @media only screen and (min-width: 800px) {
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+
+            .learn-more {
+                color: @color4;
+            }
+        }
+    }
+
+    .card-header {
+        font-family: @header-font-family;
+        font-weight: @header-font-weight;
+        color: @color1;
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+
+    .card-description {
+        color: @color1;
+        font-size: 15px;
+        line-height: 25px;
+        max-width: 216px;
+        width: 100%;
+    }
+
+    .learn-more {
+        background: @color1;
+        font-family: @base-font-family;
+        font-size: 15px;
+        padding: 15px 30px;
+        border-radius: 50px;
+        border-color: transparent;
+        margin-top: 100px;
+        transition: .3s;
+
+        &:hover {
+            cursor: pointer;
+            border: 2px solid @base-bg;
+            background: transparent;
+            color: @base-bg !important;
+            transition: .3s;
+        }
+    }
+
+}
+
+.attribution {
+    font-size: 15px;
+    font-family: @base-font-family;
+    color: @color4;
+    text-align: center;
+    margin-top: 25px;
+    transition: .3s;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            cursor: pointer;
+            color: @color2;
+            transition: .3s;
+        }
+    }
+}
