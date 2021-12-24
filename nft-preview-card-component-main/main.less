@@ -1,0 +1,172 @@
+// Font Group
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+@base-font-size: 20px;
+@base-font-family: 'Outfit', sans-serif;
+
+// Color Group
+@base-bg: hsl(0, 0%, 100%); // white
+@color1: hsl(215, 51%, 70%); // soft blue
+@color2: hsl(178, 100%, 50%); // cyan
+@color3: hsl(217, 54%, 11%); // bg
+@color4: hsl(216, 50%, 16%); // card bg
+
+body {
+    background: @color3;
+    font-family: @base-font-family;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#nft_card_container {
+    background: @color4;
+    max-width: 340px;
+    width: 100%;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 10px 15px 16px rgba(0,0,0,0.4);
+    
+    .card {
+        &__images {
+            border-radius: 10px;
+            position: relative;
+            max-height: 340px;
+            transition: .3s;
+
+            &:hover {
+                cursor: pointer;
+                background: @color2;
+
+                .card__nft {
+                    opacity: 0.4;
+                }
+
+                .card__view {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &__nft {
+            width: 100%;
+            height: auto;
+            transition: .3s;
+        }
+
+        &__view {
+            background-image: url("./images/icon-view.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: .3s;
+            opacity: 0;
+        }
+
+        &__header {
+            color: @base-bg;
+            font-size: 22px;
+            font-weight: 600;
+            transition: .3s;
+            display: inline-block;
+
+            &:hover {
+                cursor: pointer;
+                color: @color2;
+            }
+        }
+        
+        &__description {
+            color: @color1;
+            font-size: @base-font-size;
+            line-height: 28px;
+        }
+
+        &__value {
+            color: @color2;
+            margin-left: 20px;
+            position: relative;
+
+            &:before {
+                content: '';
+                background-image: url("./images/icon-ethereum.svg");
+                background-repeat: no-repeat;
+                height: 35px;
+                width: 35px;
+                position: absolute;
+                left: -20px;
+            }
+        }
+
+        &__deadline {
+            color: @color1;
+            margin-left: 20px;
+            position: relative;
+
+            &:before {
+                content: '';
+                background-image: url("./images/icon-clock.svg");
+                background-repeat: no-repeat;
+                height: 35px;
+                width: 35px;
+                position: absolute;
+                left: -20px;
+                top: 2px;
+            }
+        }
+
+        &__avatar {
+            max-width: 35px;
+            height: 35px;
+            width: 100%;
+            border: 1px solid @base-bg;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        &__name {
+            color: @color1;
+        }
+
+        &__nameLink {
+            color: @base-bg;
+            text-decoration: none;
+            transition: .3s;
+
+            &:hover {
+                cursor: pointer;
+                color: @color2;
+            }
+        }
+    }
+
+    #nft_info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #creator_info {
+        border-top: 1px solid @color1;
+        margin: 20px 0 0;
+        padding-top: 10px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.attribution {
+    color: @base-bg;
+    text-align: center;
+    margin-top: 25px;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
