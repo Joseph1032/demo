@@ -240,7 +240,7 @@ header {
 }
 
 #presentational_headline_hero {
-    background-image: url("/images/mobile/image-header.jpg");
+    background-image: url("./images/mobile/image-header.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -248,7 +248,7 @@ header {
     position: relative;
 
     @media only screen and (min-width: 480px) {
-        background-image: url("/images/desktop/image-header.jpg");
+        background-image: url("../images/desktop/image-header.jpg");
     }
     
     @media only screen and (min-width: 1024px) {
@@ -273,7 +273,7 @@ header {
     }
 
     .scroll-down {
-        background-image: url("/images/icon-arrow-down.svg");
+        background-image: url("./images/icon-arrow-down.svg");
         background-repeat: no-repeat;
         background-position: center;
         position: absolute;
@@ -486,37 +486,37 @@ header {
 
             &#milk {
                 grid-area: milk;
-                background-image: url("/images/mobile/image-gallery-milkbottles.jpg");
+                background-image: url("./images/mobile/image-gallery-milkbottles.jpg");
 
                 @media only screen and (min-width: 1200px) {
-                    background-image: url("/images/desktop/image-gallery-milkbottles.jpg");
+                    background-image: url("./images/desktop/image-gallery-milkbottles.jpg");
                 }
             }
 
             &#orange {
                 grid-area: orange;
-                background-image: url("/images/mobile/image-gallery-orange.jpg");
+                background-image: url("./images/mobile/image-gallery-orange.jpg");
 
                 @media only screen and (min-width: 1200px) {
-                    background-image: url("/images/desktop/image-gallery-orange.jpg");
+                    background-image: url("./images/desktop/image-gallery-orange.jpg");
                 }
             }
 
             &#cone {
                 grid-area: cone;
-                background-image: url("/images/mobile/image-gallery-cone.jpg");
+                background-image: url("./images/mobile/image-gallery-cone.jpg");
 
                 @media only screen and (min-width: 1200px) {
-                    background-image: url("/images/desktop/image-gallery-cone.jpg");
+                    background-image: url("./images/desktop/image-gallery-cone.jpg");
                 }
             }
 
             &#sugar_cubes {
                 grid-area: sugar_cubes;
-                background-image: url("/images/mobile/image-gallery-sugar-cubes.jpg");
+                background-image: url("./images/mobile/image-gallery-sugar-cubes.jpg");
 
                 @media only screen and (min-width: 1200px) {
-                    background-image: url("/images/desktop/image-gallery-sugarcubes.jpg");
+                    background-image: url("./images/desktop/image-gallery-sugarcubes.jpg");
                 }
             }
         }
