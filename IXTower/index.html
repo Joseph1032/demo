@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IX Tower Round</title>
+    <style>
+        body{font-family:'Montserrat', sans-serif;}
+        #symbols_container{display:flex;flex-wrap:wrap;justify-content:space-between;max-width:800px;margin:0 auto 50px;}
+        .symbols{display:flex;flex-direction:column;align-items:center;margin:10px;padding:0 0 20px 0;border:none;}
+        .symbols:hover{cursor:pointer;}
+        .symbols img{max-width:150px;width:100%;height:100%;margin-bottom:20px;}
+        #activeSymbol{max-width:500px;width:100%;margin:0 auto;text-align:center;text-transform:uppercase}
+        #reset{padding:7px 0;display:block;text-align:center;width:100%;margin:0 auto;max-width:100px;}
+    </style>
+</head>
+<body>
+    <div id="symbols_container">
+        <button class="symbols" id="poison"><img src="poison.png"><p>Poison</p></button>
+        <button class="symbols" id="water"><img src="water.png"><p>Water</p></button>
+        <button class="symbols" id="electric"><img src="electric.png"><p>Electric</p></button>
+        <button class="symbols" id="fire"><img src="fire.png"><p>Fire</p></button>
+        <button class="symbols" id="brawler"><img src="brawler.png"><p>Brawler</p></button>
+        <button class="symbols" id="gladiator"><img src="gladiator.png"><p>Gladiator</p></button>
+        <button class="symbols" id="blight"><img src="blight.png"><p>Blight</p></button>
+        <button class="symbols" id="tiger"><img src="tiger.png"><p>Tiger</p></button>
+    </div>
+    <div id="activeSymbol"></div>
+    <button id="reset">Reset</button>
+</body>
+<script>
+    let symbols = document.querySelectorAll(".symbols");
+    let orderContainer = document.getElementById("activeSymbol");
+    let reset = document.getElementById("reset");
+    let order = [];
+    symbols.forEach(symbol => {
+        symbol.addEventListener("click", () => {
+            let nameOrder = symbol.textContent;
+            order.push(nameOrder)
+
+            orderContainer.innerHTML = `<p>${order}</p>`
+        })
+    })
+    reset.addEventListener("click", () => {
+        window.location.reload();
+    })
+</script>
+</html>
