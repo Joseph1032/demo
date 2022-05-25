@@ -1,1 +1,2 @@
-# Challenges from FrontEnd Mentor
+# Personal projects
+A combination of mockup-to-websites and JavaScript projects
