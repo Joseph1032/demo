@@ -20,7 +20,7 @@
         <option value="9431">Glenridge</option> 
         <option value="9432">Huntsview</option> 
         <option value="9433">Lakeside Place</option> 
-        <option value="10515">Living Well Homes (General)</option> 
+        <option></option> 
         <option value="9436">Prisma </option> 
         <option value="9919">Rainbow Ridge </option> 
         <option value="9050">Sofia</option> 
@@ -33,26 +33,21 @@
         <option value="9437">Treehouse</option> 
     </select>
     <script>
-        // let getCommOptions = document.querySelector(".corporation_community_list").options;
-        // let commOptionsArr = Array.from(getCommOptions);
+        const commDropdown = document.querySelector('.corporation_community_list').options;
+        let commList = Array.from(commDropdown);
+        commList.forEach(option => {
+            if (option.textContent == "") {
+                option.remove();
+            }
+        })
 
-        // let duplicateArrItem = [];
-        // commOptionsArr.forEach(option => {
-        //     let commAttr = option.getAttribute("value");
-        //     if (commAttr == "10515") {
-        //         duplicateArrItem = option; // Living Well Homes (General)
-        //     }
-        // })
-        // commOptionsArr = commOptionsArr.filter(function(item) {
-        //     return item !== duplicateArrItem
-        // })
-        // getCommOptions.innerHTML = commOptionsArr;
-        const commDropdown = document.querySelector('.corporation_community_list');
-        const commList = commDropdown.querySelectorAll('option[value="10515"]');
-        commList[1].style.display = 'none';
-        commList[1].disabled = true;
-        commList[1].setAttribute("hidden", true)
-        commList[1].setAttribute("value", "")
+        // disabling duplicate
+        // const commDropdown = document.querySelector('.corporation_community_list');
+        // const commList = commDropdown.querySelectorAll('option[value="10515"]');
+        // commList[1].style.display = 'none';
+        // commList[1].disabled = true;
+        // commList[1].setAttribute("hidden", true)
+        // commList[1].setAttribute("value", "")
     </script>
 </body>
 </html>
