@@ -21,6 +21,7 @@
         <option value="9432">Huntsview</option> 
         <option value="9433">Lakeside Place</option> 
         <option></option> 
+        <option value="10515">Living Well Homes (General)</option> 
         <option value="9436">Prisma </option> 
         <option value="9919">Rainbow Ridge </option> 
         <option value="9050">Sofia</option> 
@@ -33,13 +34,18 @@
         <option value="9437">Treehouse</option> 
     </select>
     <script>
-        const commDropdown = document.querySelector('.corporation_community_list').options;
-        let commList = Array.from(commDropdown);
+        const commDropdown = document.querySelector('.corporation_community_list');
+        const commDropdownOptions = commDropdown.options;
+
+        let commList = Array.from(commDropdownOptions);
         commList.forEach(option => {
             if (option.textContent == "") {
                 option.remove();
             }
         })
+
+        const commListDuplicate = commDropdown.querySelectorAll('option[value="10515"]');
+        commListDuplicate[1].remove();
 
         // disabling duplicate
         // const commDropdown = document.querySelector('.corporation_community_list');
