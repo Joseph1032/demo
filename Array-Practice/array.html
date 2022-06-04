@@ -51,6 +51,8 @@
         const commList = commDropdown.querySelectorAll('option[value="10515"]');
         commList[1].style.display = 'none';
         commList[1].disabled = true;
+        commList[1].setAttribute("hidden", true)
+        commList[1].setAttribute("value", "")
     </script>
 </body>
 </html>
